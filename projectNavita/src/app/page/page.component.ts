@@ -24,6 +24,7 @@ export class PageComponent implements OnInit {
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
+
   constructor(private buscarFipe: BuscarFipeService) { }
 
   ngOnInit(): void {
@@ -43,7 +44,6 @@ export class PageComponent implements OnInit {
     this.buscarFipe.listarModelo(codigo).subscribe( (dados) =>
     { this.modelo2 = dados;
       this.dataSourceModelo = new MatTableDataSource(this.modelo2.modelos);
-      this.dataSource.paginator = this.paginator;
     });
   }
 }
