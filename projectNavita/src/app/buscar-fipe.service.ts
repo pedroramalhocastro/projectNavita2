@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
+import { Observable } from 'rxjs';
+import { ModeloMarca } from './modelo.model';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +17,7 @@ export class BuscarFipeService {
   }
 
   listarModelo(id: number){
-    return this.htpp.get<any[]>(`https://parallelum.com.br/fipe/api/v1/carros/marcas/${id}/modelos`);
+    return this.htpp.get<ModeloMarca>(`https://parallelum.com.br/fipe/api/v1/carros/marcas/${id}/modelos`);
   }
-  //an
+
 }
