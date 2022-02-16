@@ -8,8 +8,8 @@ import { ModeloMarca } from './modelo.model';
 })
 export class BuscarFipeService {
 
-   urlMarca = 'https://parallelum.com.br/fipe/api/v1/carros/marcas';
-   
+   urlMarca = 'https://dentalclouddev.s3.amazonaws.com/challenge/tarot.json';
+
   constructor(private htpp: HttpClient) { }
 
   listarMarcas(){
